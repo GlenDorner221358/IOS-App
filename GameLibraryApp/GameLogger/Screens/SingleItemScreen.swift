@@ -26,10 +26,6 @@ struct SingleItemScreen: View {
                 HStack{
                     Image(systemName: "flame")
                         .renderingMode(.original)
-    //                    .symbolRenderingMode(.palette)
-    //                    .foregroundStyle(.white, .yellow)
-    //                    .font(.system(size:140))
-    //                  can style icons like this to get multiple colors
                         .resizable()
                         .scaledToFit()
                         .foregroundColor(.black)
