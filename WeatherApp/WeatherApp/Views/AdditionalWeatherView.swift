@@ -6,13 +6,11 @@
 //
 
 import SwiftUI
-
+//right click views then add file then add swift ui file and then here you ares
 struct AdditionalWeatherView: View {
-    
     var icon = "wind"
-    var title = "wind speed"
-    var value = "33km/h"
-    
+    var title = "Wind Speed"
+    var value = "33"
     var body: some View {
         HStack{
             Image(systemName: icon)
@@ -20,12 +18,17 @@ struct AdditionalWeatherView: View {
             Spacer()
             Text(value)
                 .bold()
-        }.padding()
-            .background(.white)
-            .cornerRadius(20)
+            
+        }
+        .padding()
+        .background(.white)
+        .foregroundColor(.blue)
+        .cornerRadius(20)
     }
 }
 
-#Preview {
-    AdditionalWeatherView()
+struct AdditionalWeatherView_Previews: PreviewProvider {
+    static var previews: some View {
+        AdditionalWeatherView()
+    }
 }

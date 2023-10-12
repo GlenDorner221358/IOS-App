@@ -19,6 +19,7 @@ struct City: Identifiable {
     var windSpeed: Int
     var humidity: Int
     //TODO: Weekday forecasts
+    var weekdayWeather: [Weather]
 }
 
 //dummy city from blueprint for previews
@@ -29,5 +30,6 @@ let dummyCity: City = City(
     minTemp: 1,
     icon: "fireplace",
     windSpeed: 12,
-    humidity: 33)
+    humidity: 33,
+    weekdayWeather: [dummyWeather, dummyWeather])
 
