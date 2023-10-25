@@ -11,6 +11,24 @@ struct CityListScreen: View {
 // var that toggles the settings screen
     //@state is a usestate
     @State var showSettings: Bool = false
+
+    // State variable for searching a city
+    @State var searchText = ""
+
+    @AppStorage("displayMode") var displayMode = "primary"
+
+    // Search function
+    // step 1: make a var for the search results
+    // Step 2: set variable to a function with an if
+    var searchResult: [City] {
+        // if searchtext is null, show everything
+        if(searchText.isEmpty) {
+            return CityData
+        } else { //else return cities that contain searched text
+            return CityData.filter{ $0.name.contains(searchText) }
+        }
+    }
+    
     
     var body: some View {
         
@@ -18,7 +36,7 @@ struct CityListScreen: View {
             
             List{
                 //looping through each city in my cityData file
-                ForEach(CityData){ city in //city is the new name for each value in my list
+                ForEach(searchResult){ city in //city is the new name for each value in my list
                     //CLASS EXERCISE pt 2 - attempt styling the layout for each city from the class slides
                     NavigationLink(destination: WeatherScreen(city: city)) { //pass the city as a param to the screen
                         HStack{
@@ -58,8 +76,8 @@ struct CityListScreen: View {
               Image(systemName: "gearshape")
             })
         }//END of navigation
-        .sheet(isPresented: $showSettings, onDismiss:
-                {showSettings.toggle()}){
+        .searchable(text: $searchText)
+        .sheet(isPresented: $showSettings){
                 SettingsScreen()
         }
         
