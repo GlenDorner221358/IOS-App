@@ -10,11 +10,16 @@ import SwiftUI
 @main
 struct GameLoggerApp: App {
     let persistenceController = PersistenceController.shared
+    @AppStorage("isOnboarded") var isOnboarded: Bool = false
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+            //If has not been onboarded, show onboarding screen
+            if(isOnboarded){
+                HomeScreen()
+            }else{
+                OnboardingScreen()
+            }
         }
     }
 }
