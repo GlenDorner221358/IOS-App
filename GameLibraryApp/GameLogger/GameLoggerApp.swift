@@ -16,7 +16,7 @@ struct GameLoggerApp: App {
         WindowGroup {
             //If has not been onboarded, show onboarding screen
             if(isOnboarded){
-                HomeScreen()
+                LibraryScreen(Game: dummyGame)
             }else{
                 OnboardingScreen()
             }

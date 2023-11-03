@@ -18,6 +18,14 @@
 		3F5A0A4F2ACEF3BC0024C8FE /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A0A4E2ACEF3BC0024C8FE /* Persistence.swift */; };
 		3F5A0A522ACEF3BC0024C8FE /* GameLogger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A0A502ACEF3BC0024C8FE /* GameLogger.xcdatamodeld */; };
 		3F5A0A5A2ACEF4160024C8FE /* SingleItemScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5A0A592ACEF4160024C8FE /* SingleItemScreen.swift */; };
+		5BCC73962AF50B4A0004DD3A /* app icon ios (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC73952AF50B4A0004DD3A /* app icon ios (1).png */; };
+		5BCC73982AF50F8F0004DD3A /* pkmnblackcover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC73972AF50F8F0004DD3A /* pkmnblackcover.jpeg */; };
+		5BCC739A2AF50F9A0004DD3A /* teamfortress2logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 5BCC73992AF50F9A0004DD3A /* teamfortress2logo.jpeg */; };
+		5BDAEAB02AF4FD9F0051CDC5 /* OnboardingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDAEAAF2AF4FD9F0051CDC5 /* OnboardingScreen.swift */; };
+		5BDAEAB22AF4FDBE0051CDC5 /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDAEAB12AF4FDBE0051CDC5 /* SettingsScreen.swift */; };
+		5BDAEAB62AF4FE040051CDC5 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDAEAB52AF4FE040051CDC5 /* SplashScreen.swift */; };
+		5BDAEAB92AF4FF8D0051CDC5 /* SSX_3_Coverart.png in Resources */ = {isa = PBXBuildFile; fileRef = 5BDAEAB82AF4FF8D0051CDC5 /* SSX_3_Coverart.png */; };
+		5BDAEAC02AF503380051CDC5 /* OnboardingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BDAEABF2AF503380051CDC5 /* OnboardingCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +40,15 @@
 		3F5A0A4C2ACEF3BC0024C8FE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3F5A0A4E2ACEF3BC0024C8FE /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		3F5A0A512ACEF3BC0024C8FE /* GameLogger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GameLogger.xcdatamodel; sourceTree = "<group>"; };
-		3F5A0A592ACEF4160024C8FE /* SingleItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleItemScreen.swift; sourceTree = "<group>"; };
+		3F5A0A592ACEF4160024C8FE /* SingleItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SingleItemScreen.swift; path = GameLogger/Screens/SingleItemScreen.swift; sourceTree = SOURCE_ROOT; };
+		5BCC73952AF50B4A0004DD3A /* app icon ios (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "app icon ios (1).png"; path = "../../../../../../Downloads/app icon ios (1).png"; sourceTree = "<group>"; };
+		5BCC73972AF50F8F0004DD3A /* pkmnblackcover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pkmnblackcover.jpeg; sourceTree = "<group>"; };
+		5BCC73992AF50F9A0004DD3A /* teamfortress2logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = teamfortress2logo.jpeg; sourceTree = "<group>"; };
+		5BDAEAAF2AF4FD9F0051CDC5 /* OnboardingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingScreen.swift; sourceTree = "<group>"; };
+		5BDAEAB12AF4FDBE0051CDC5 /* SettingsScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsScreen.swift; sourceTree = "<group>"; };
+		5BDAEAB52AF4FE040051CDC5 /* SplashScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		5BDAEAB82AF4FF8D0051CDC5 /* SSX_3_Coverart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SSX_3_Coverart.png; sourceTree = "<group>"; };
+		5BDAEABF2AF503380051CDC5 /* OnboardingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +97,8 @@
 		3F5A0A442ACEF3BA0024C8FE /* GameLogger */ = {
 			isa = PBXGroup;
 			children = (
+				5BDAEABA2AF501810051CDC5 /* Views */,
+				5BDAEAB72AF4FF390051CDC5 /* Assets */,
 				3F25A58A2AD80B4C00519EE3 /* Models */,
 				3F25A5872AD8095F00519EE3 /* Data */,
 				3F5A0A582ACEF3D90024C8FE /* Screens */,
@@ -107,9 +125,31 @@
 			children = (
 				3F5A0A592ACEF4160024C8FE /* SingleItemScreen.swift */,
 				3F25A58D2AD810C100519EE3 /* HomeScreen.swift */,
+				5BDAEAAF2AF4FD9F0051CDC5 /* OnboardingScreen.swift */,
+				5BDAEAB52AF4FE040051CDC5 /* SplashScreen.swift */,
+				5BDAEAB12AF4FDBE0051CDC5 /* SettingsScreen.swift */,
 				3F2CC5D32AD83BA300A60F89 /* LibraryScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		5BDAEAB72AF4FF390051CDC5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				5BCC73992AF50F9A0004DD3A /* teamfortress2logo.jpeg */,
+				5BCC73972AF50F8F0004DD3A /* pkmnblackcover.jpeg */,
+				5BCC73952AF50B4A0004DD3A /* app icon ios (1).png */,
+				5BDAEAB82AF4FF8D0051CDC5 /* SSX_3_Coverart.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		5BDAEABA2AF501810051CDC5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BDAEABF2AF503380051CDC5 /* OnboardingCardView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +210,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BCC739A2AF50F9A0004DD3A /* teamfortress2logo.jpeg in Resources */,
 				3F5A0A4D2ACEF3BC0024C8FE /* Preview Assets.xcassets in Resources */,
+				5BCC73982AF50F8F0004DD3A /* pkmnblackcover.jpeg in Resources */,
+				5BDAEAB92AF4FF8D0051CDC5 /* SSX_3_Coverart.png in Resources */,
+				5BCC73962AF50B4A0004DD3A /* app icon ios (1).png in Resources */,
 				3F5A0A4A2ACEF3BC0024C8FE /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -182,12 +226,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BDAEAB62AF4FE040051CDC5 /* SplashScreen.swift in Sources */,
+				5BDAEAB02AF4FD9F0051CDC5 /* OnboardingScreen.swift in Sources */,
 				3F5A0A5A2ACEF4160024C8FE /* SingleItemScreen.swift in Sources */,
 				3F25A5892AD8099900519EE3 /* GameData.swift in Sources */,
 				3F5A0A4F2ACEF3BC0024C8FE /* Persistence.swift in Sources */,
 				3F25A58C2AD80B6800519EE3 /* Games.swift in Sources */,
 				3F2CC5D42AD83BA300A60F89 /* LibraryScreen.swift in Sources */,
 				3F25A58E2AD810C100519EE3 /* HomeScreen.swift in Sources */,
+				5BDAEAB22AF4FDBE0051CDC5 /* SettingsScreen.swift in Sources */,
+				5BDAEAC02AF503380051CDC5 /* OnboardingCardView.swift in Sources */,
 				3F5A0A522ACEF3BC0024C8FE /* GameLogger.xcdatamodeld in Sources */,
 				3F5A0A482ACEF3BA0024C8FE /* ContentView.swift in Sources */,
 				3F5A0A462ACEF3BA0024C8FE /* GameLoggerApp.swift in Sources */,

@@ -26,7 +26,7 @@ struct LibraryScreen: View {
         if(searchText.isEmpty) {
             return GameData
         } else { //else return cities that contain searched text
-            return GameData.filter{ $0.name.contains(searchText) }
+            return GameData.filter{ $0.title.contains(searchText) }
         }
     }
 
@@ -35,16 +35,16 @@ struct LibraryScreen: View {
     var body: some View {
         // colors the page
         ZStack{
-            LinearGradient(colors: [.red, .white], startPoint: .top, endPoint: .bottomTrailing)
+            LinearGradient(colors: [.teal, .white], startPoint: .top, endPoint: .bottomTrailing)
                 .ignoresSafeArea(.all)
 
             NavigationView{
                 List{
                     // Loops through each game in the file where I store all my games
-                    ForEach(SearchResult){ game in 
-                        NavigationLink(destination: SingleItemScreen(game: game)) {
+                    ForEach(searchResult){ game in
+                        NavigationLink(destination: SingleItemScreen(Game: game)) {
                             HStack{
-                                Image(systemName: game.icon)
+                                Image("\(Game.cover)")
                                     .resizable()
                                     .scaledToFit()
                                     .frame(width: 100, height: 50)
@@ -54,15 +54,16 @@ struct LibraryScreen: View {
                                     .cornerRadius(10)
 
                                 VStack(alignment: .leading){
-                                    Text(game.developer)
+                                    Text(game.title)
+    //                                    .alignment(.trailing)
                                         .font(.title2)
+                                        .bold()
+                                    Text(Game.dev)
+                                        .font(.title3)
                                     Text(game.releaseDate)
                                 }//END OF VSTACK
 
-                                Text(game.title)
-                                    .alignment(.trailing)
-                                    .font(.title)
-                                    .bold()
+                                
 
                             }//END OF HSTACK (individual)
                         }//END OF NAVLINK
@@ -91,7 +92,7 @@ struct LibraryScreen: View {
 
 struct LibraryScreen_Previews: PreviewProvider {
     static var previews: some View {
-        LibraryScreen()
+        LibraryScreen(Game: dummyGame)
     }
 }
 

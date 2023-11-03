@@ -2,7 +2,7 @@
 //  OnboardingCardView.swift
 //  GameLogger
 //
-//  Created by Glen
+//  Created by Open Window Developer on 2023/11/03.
 //
 
 import SwiftUI
@@ -13,7 +13,7 @@ struct OnboardingCardView: View {
     var description: String
     
     var body: some View {
-        VStack (alignment: .center, spacing: 20) {
+        VStack (alignment: .center, spacing: 20){
             Text(title)
                 .font(.system(size: 52, weight: .heavy))
                 .multilineTextAlignment(.center)
@@ -22,22 +22,22 @@ struct OnboardingCardView: View {
                 .resizable()
                 .scaledToFit()
                 .symbolRenderingMode(.palette)
-                    .foregroundStyle(.red, .white)
-                    .frame(width: 140, height: 140)
-                    .padding()
+                .foregroundStyle(.red, .white)
+                .frame(width: 140, height: 140)
+                .padding()
             Text(description)
                 .multilineTextAlignment(.center)
                 .font(.title)
                 .bold()
-        }
+        }//END OF VSTACK
         .padding(40)
         .frame(maxWidth: .infinity)
         .background(.teal)
         .cornerRadius(20)
         .foregroundColor(.white)
         .shadow(color: .black.opacity(0.3), radius: 20, x: 2, y: 10)
-        }
     }
+}
 
 struct OnboardingCardView_Previews: PreviewProvider {
     static var previews: some View {

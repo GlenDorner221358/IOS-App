@@ -24,22 +24,22 @@ struct HomeScreen: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 50, height: 50)
-                    .alignment(.trailing)
+                    
 
                 Spacer()
                         
-                ForEach(){ game in 
-                    total = total + 1
-                }
+//                ForEach(){ game in
+//                    total = total + 1
+//                }
 
-                Text("Total games: " + )
+                Text("Total games: ")
                     .font(.title)
                     .bold()
-                    .alignment(leading)
+//                    .alignment(.leading)
                 
                 Spacer()
 
-                NavigationLink(destination: LibraryScreen()) {
+                NavigationLink(destination: LibraryScreen( Game: Game)) {
                     Text("Browse collection")
                 }//END OF NAVLINK
 
@@ -51,6 +51,6 @@ struct HomeScreen: View {
 
 struct HomeScreen_Previews: PreviewProvider {
     static var previews: some View {
-        HomeScreen()
+        HomeScreen(Game: dummyGame)
     }
 }

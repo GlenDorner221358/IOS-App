@@ -19,9 +19,6 @@ struct SettingsScreen: View {
 
     var body: some View {
         VStack (spacing: 20) {
-            LinearGradient(colors: [.teal, .white], startPoint: .top, endPoint: .bottomTrailing)
-                .ignoresSafeArea(.all)
-
             // Header section
             HStack {
               Text("Settings")
@@ -32,13 +29,14 @@ struct SettingsScreen: View {
                 .onTapGesture { //on click
                     dismiss()
                 }
-            }
+            }.padding(.bottom, 20)
 
             Text("Username")
             TextField("Your Username", text: $username)
                 .padding()
                 .background(.blue)
                 .cornerRadius(20)
+                .foregroundColor(.white)
 
 
             Text("Display Mode")
@@ -47,6 +45,7 @@ struct SettingsScreen: View {
                 Text("Evil-mode").tag("evilmode")
             }
             .pickerStyle(.segmented)
+            .padding(.bottom, 30)
 
             // About the app
             GroupBox{
@@ -75,19 +74,22 @@ struct SettingsScreen: View {
             GroupBox{
                 DisclosureGroup("App Description"){
                     Text("Welcome to GameLogger, an all in one library tool to catalogue your games collection! Forgot how to play? The handy-dandy tutorial feature tells you exactly how to turn on and play the game! Just follow the simple steps provided. ").padding().bold(false)
-                }.foregroundColor(colorScheme == .Light ? .black : .white).bold()
+                }.foregroundColor(colorScheme == .light ? .black : .white).bold()
             }
 
             if(colorScheme == .light){
-                Text("\(colorScheme == .dark ? "Dark" : "Light") mode is activated")
+                Text("\(colorScheme == .dark ? "Evil" : "Light") mode is activated")
             }
 
-            Spacer()
+//            Spacer()
+            
         }//END OF VSTACK
         .padding()
     }
 }
 
-#Preview {
-    SettingsScreen()
+struct SettingsScreen_Previews: PreviewProvider {
+    static var previews: some View {
+        SettingsScreen()
+    }
 }
