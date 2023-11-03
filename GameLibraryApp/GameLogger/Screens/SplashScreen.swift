@@ -15,7 +15,7 @@ struct SplashScreen: View {
     var body: some View {
         if isActive {
             if(isOnboarded){
-                HomeScreen(Game: dummyGame)
+                LibraryScreen(Game: dummyGame)
             }else{
                 OnboardingScreen()
             }
